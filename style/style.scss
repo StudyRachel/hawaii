@@ -1,0 +1,132 @@
+@import "variables";
+@import "header";
+@import "footer";
+
+main{
+    section.backImage{
+        min-height: 90vh;
+        width: 100%;
+        background-image: url("../Pictures/pexels-photo-416676.jpeg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h3{
+            font-size: 3.5rem;
+            color: white;
+            margin: 2rem 0rem;
+        }
+
+        button.start{
+            background-color: #3bf0e5;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.5rem;
+            color: rgb(166, 179, 235);
+            border: none; // 無邊框線
+            border-radius: 1rem;
+            cursor: pointer; // 滑鼠:手指符號  
+            &:hover{
+                color: yellow;
+            }          
+        }
+        div.filter{
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 100%;
+            min-height: 90vh;
+            position: absolute;
+            top:0;
+            z-index: -1;
+        }
+    }
+
+    section.second{
+        // min-height: 100vh;
+        // 內容有多少完整呈現,不指定高度
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        section.cards{
+            display: flex;
+            // border: 2px solid red;
+            width: 80%;
+            min-height: 80vh;
+            // height: 80vh,因空間不夠,造成footer會往上擠壓,改設定為 min-height: 80vh;
+            flex-wrap: wrap;
+            div.card{
+                // border: 2px solid blue;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 1rem;
+                flex: 1 1 300px;
+                // 等寬
+
+                div.image_container{
+                    width: 15vw;
+                    height: 15vw;
+                    border-radius: 50%;
+                    // border: 2px solid blue;
+                    overflow: hidden;
+                    // 超出框線隱藏,產生不同的動畫效果
+                    img{
+                        width: 15vw;
+                        height: 15vw;
+                        border-radius: 50%;
+                        // margin: 1rem 0rem;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+                
+                h4{
+                    font-size: 2rem;
+                    margin: 1rem 0rem;
+                }
+                p{
+                    font-size: 1.25rem;
+                }
+                a{
+                    text-decoration: none;
+                    padding: 1rem 1.5rem;
+                    background-color: #09777d;
+                    color: white;
+                    font-size: 1.25rem;
+                    margin: 1rem 0rem;
+                    &:hover{
+                        color: red;
+                    }
+                }
+            }
+        }
+        h2{
+            font-size: 2rem;
+            margin: 2rem 0rem;
+        }
+    }
+}
+
+// 當螢幕變小時從原比例15vw,調整為40vw
+@media screen and (max-width:700px) {
+    main{
+        section.second{
+            section.cards{
+                div.card{
+                    img{
+                        width: 40vw;
+                        height: 40vw;
+                    }
+                }
+            }
+        }
+    }
+}

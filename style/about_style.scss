@@ -1,0 +1,143 @@
+main{
+    width:80%;
+    display: flex;
+    margin: auto;
+    aside{
+        width: 30%;
+        // border: 1px solid red;
+        ul{
+            text-align: left;
+            // border: 1px solid yellow;
+            margin: 1rem auto;
+            li{
+                padding: 1rem;
+                border-bottom: 1px solid gray;
+                list-style-type: none;
+                a{
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: black;
+                    &:hover{
+                        color: orange;
+                    }
+                    
+                }
+            }
+        }
+    }
+    article{
+        width: 70%;
+       // border: 1px solid blue;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        section.top{
+            margin-bottom: 1rem;
+            div.introduce{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                div.text{
+                    width: 35%;
+                    h1{
+                        font-size: 30px;
+                        font-weight: bolder;
+                    }
+                }
+                div.img{
+                    width: 50%;
+                    img{
+                        //border: 1px solid blue;
+                        width: 100%;
+                    }
+                }
+                
+            }
+        }
+        section.bottom{
+            margin-bottom: 1rem;
+            div.introduce_bottom{
+                display: flex;
+                justify-content: space-around;
+                div.text{
+                    width: 35%;
+                    //border: 1px solid green;
+                    margin-left: 1rem;
+                    h1{
+                        font-size: 30px;
+                        font-weight: bolder;
+                    }
+                }
+                div.benefit{
+                    width: 60%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    // border: 1px solid green;
+                    div.num{
+                        width: 200px;
+                        //border: 1px solid gold;
+                        padding: 1rem;
+                        p.title_p{
+                            font-size: 25px;
+                            font-weight: bolder;
+                            //border: 1px solid gold;
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+}
+
+
+// 當螢幕變小時從原比例15vw,調整為40vw
+@media screen and (max-width:550px) {
+    main{
+        width: 95%;
+        aside{            
+            ul{
+                li{
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        article{
+            //border: 1px solid red;
+            section.top{
+                div.introduce{
+                    flex-direction: column;
+                    div.text{
+                        width: 100%;
+                        //border: 1px solid yellow;
+                    }
+                    div.img{
+                        width: 100%;
+                    }
+                }
+            }
+            section.bottom{
+                div.introduce_bottom{
+                    flex-direction: column;
+                    //border: 1px solid yellow;
+                    div.text{
+                        width: 100%;
+                        margin-left: 0;
+                        margin-bottom: 1rem;
+
+                    }
+                    div.benefit{
+                        width: 100%;
+                        div.num{
+                            width: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

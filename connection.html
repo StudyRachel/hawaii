@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夏威夷旅遊租借服務 | 聯絡我們</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/connection_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./Icons/black logo.svg" alt="logo">
+            <h1>夏威夷旅遊租借服務</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="login.html">會員登入</a></li>
+                <li><a href="connection.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.034201293542!2d120.60793431480057!3d24.17053328438395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e048d342aa9%3A0x2b6f18a6783fa3b!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5Lit5b2w5oqV5YiG572y77yI6Ie65Lit6IG36KiT5bGA77yJ!5e0!3m2!1szh-TW!2stw!4v1651926995643!5m2!1szh-TW!2stw" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+        <section class="Information">
+            <section class="cards">
+                <div class="card">
+                    <div class="image_container">
+                        <img src="./Icons/placeholder.svg" alt="">
+                    </div>
+                    <h3>台中市西屯區工業區一路100號</h3>
+                </div>
+                <div class="card">
+                    <div class="image_container">
+                        <img src="./Icons/call.svg" alt="">
+                    </div>                    
+                    <h3>04-1234-5678</h3>
+                </div>
+                <div class="card">
+                    <div class="image_container">
+                        <img src="./Icons/envelope.svg" alt="">
+                    </div>
+                    <h3>tcnrps@wda.gov.tw</h3>
+                </div>
+            </section>
+        </section>
+        <section class="contact">
+            <div class="formAll">
+                <div class="title">
+                    <h2>CONTACT FORM</h2>
+                    <p>/ 為了提供您更完善的服務，請務必輸入正確的資料，謝謝您，<img src="./Icons/og_10.png" alt=""> 為必填欄位</p>
+                </div>
+                
+                <form action="connection.html">
+                    <h3><img src="./Icons/og_10.png" alt="">姓名</h3>
+                    <input type="text" name="name" required>
+                    <h3><img src="./Icons/og_10.png" alt="">行動電話</h3>
+                    <input type="text" name="phone" required>
+                    <h3><img src="./Icons/og_10.png" alt="">問題與建議</h3>
+                    <textarea name="sug" required style="width:90%; height:100px;"></textarea>
+                    <h3><img src="./Icons/og_10.png" alt="">E-mail</h3>
+                    <input type="email" name="email" required pattern="[a-z0-9._%]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    
+                    <div class="btn">
+                        <input type="reset" value="重新填寫">
+                        <input type="submit" value="確認送出">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <img src="./Icons/black logo.svg" alt="logo">
+            <h1>夏威夷旅遊租借服務</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="links">
+            <a href="https://zh-tw.facebook.com"><img src="./Icons/facebook.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com"><img src="./Icons/instagram.svg" alt="instagram"></a>
+            <a href="https://twitter.com/"><img src="./Icons/twitter.svg" alt="twitter"></a>
+            <a href="https://www.youtube.com"><img src="./Icons/youtube.svg" alt="youtube"></a>
+        </section>
+    </footer>
+</body>
+</html>

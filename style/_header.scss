@@ -1,0 +1,57 @@
+header{
+    display: flex;
+    align-items: center;
+    // RWD
+    flex-wrap: wrap;
+    
+    // 鎖定標題列
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: white;
+    // 因body沒設定顏色,若跑到同色會不好區分
+    // 陰影改用js監聽
+    // box-shadow: 3px 3px 5px 1px #757474;
+    div.logo{
+        display: flex;
+        align-items: center;
+        flex: 5 1 400px;
+        // 為以下縮寫
+        // flex-grow: 5;
+        // flex-shrink: 1;
+        // flex-basis: 400px; 最基本寬度最基本寬度
+        margin-left: 2rem;
+        img{
+            width: 6vw;
+            height: 6vw;
+        }
+    }
+    nav{
+        flex: 2 1 400px;
+        ul{
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+            // 設定寬度才有作用
+            li{
+                a{
+                    color: #09777d;
+                    text-decoration: none;
+                    font-size: 1.35rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px){
+    header{
+        div.logo{
+            margin-left: 0.5rem;
+            img{
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+    }
+}

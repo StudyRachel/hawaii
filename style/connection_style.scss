@@ -1,0 +1,135 @@
+main{
+    .map{
+        // border: 1px solid red;
+        width: 90%;
+        margin: 1rem auto;
+    }
+    section.Information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        section.cards{
+            display: flex;
+            // border: 2px solid red;
+            width: 80%;
+            flex-wrap: wrap;
+            div.card{
+                // border: 2px solid blue;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 1rem;
+                flex: 1 1 300px;
+                // 等寬
+
+                div.image_container{
+                    width: 8vw;
+                    height: 8vw;
+                    border-radius: 50%;
+                    // border: 2px solid blue;
+                    background-color: orange;
+                    overflow: hidden;
+                    // 超出框線隱藏,產生不同的動畫效果
+                    img{
+                        width: 8vw;
+                        height: 8vw;
+                        border-radius: 50%;
+                        // border: 1px solid green;
+                        // margin: 1rem 0rem;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+                
+                h3{
+                    margin: 1rem 0rem;
+                }
+            }
+        }
+    }
+    section.contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0rem;
+        div.formAll{
+            width: 80%;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            div.title{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                
+                h2{
+                    color: orange;
+                    font-weight: bolder;
+                    &::before{
+                        content: url(/Icons/email.png);
+                        padding-right: 1rem;
+                    }
+                }
+                p{
+                    padding-left: 1rem;
+                    img{
+                        vertical-align: baseline;
+                    }
+                }
+            }
+            form{
+                // border: 1px solid yellow;
+                text-align: center;
+                h3{
+                    width:90%; 
+                    // border: 1px solid blue;
+                    margin: 5px auto;
+                    text-align: left;
+                    img{
+                        padding-right: 1rem;
+                    }
+                }
+                input{
+                    // border: 1px solid red;
+                    width:90%; 
+                    height:30px;
+                    margin: 5px auto;
+                }
+                div.btn{
+                    display: flex;
+                    justify-content: center;
+                    input{
+                        font-size: 20px;
+                        border-radius: 10%;
+                        width: 30%;
+                        height: 50px;
+                        border: 1px solid #ccc;
+                        box-shadow: 0px 0px 10px 0px #ccc;
+                        cursor: pointer;
+                        &:nth-child(1){
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+    main{
+        section.contact{
+            div.formAll{
+                div.title{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
